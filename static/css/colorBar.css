@@ -1,0 +1,34 @@
+
+/*防 Google + 下拉刷新功能
+ author : Anson 
+ E-mail : 75526201@qq.com
+*/
+@-webkit-keyframes colorBar {
+  0%{
+	  background-position-x:0px;
+
+  }
+
+  100% {
+	 background-position-x:324px
+  }
+}
+
+@keyframes colorBar {
+  0%{
+	  background-position-x:0px;
+
+  }
+
+  100% {
+	 background-position-x:324px
+  }
+}
+
+
+.colorBar{
+	background:url(img/colorbar.gif) repeat right center;
+	background-size:324px 3px;
+	-webkit-animation: 1s colorBar linear infinite;
+	animation: 1s colorBar linear infinite;
+	}
