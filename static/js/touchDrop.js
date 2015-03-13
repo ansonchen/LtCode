@@ -7,7 +7,7 @@
 	var touchDrop = {
 		
 		unfinish : true,
-		
+		movepx : 0,
 		init : function(){
 			var cdiv = document.createElement('div'), progress = document.createElement('div');
 			cdiv.style.cssText = 'position:absolute; height:3px; width:100%; z-index:100; left:0; top:0; text-align:center';
@@ -16,6 +16,8 @@
 			x.appendChild(cdiv);
 			this.progress = progress;
 			x.addEventListener("touchstart", this, false);
+			x.addEventListener('touchend', this, false);
+			x.addEventListener('touchmove', this, false);
 			},
 		handleEvent: function(e){
 				switch(e.type) {
@@ -24,32 +26,34 @@
 					case 'touchend': this.onTouchEnd(e); break;
 				}
 			},
-		onTouchStart : function(e){
+		onTouchStart : function(e){			
 			
 				if(this.unfinish){	
-					e.preventDefault(),e.stopPropagation();
-					x.addEventListener('touchend', this, false);
-					x.addEventListener('touchmove', this, false);
+					e.stopPropagation();					
 					this.startY = e.touches[0].clientY;
 				};
 				
 			},
 		onTouchMove: function(e){
-			if(this.unfinish && this.startY){
-				e.preventDefault(),e.stopPropagation();
-				if (document.body.scrollTop ===0 && e.touches[0].clientY - this.startY > 10) {
-					this.endY = e.touches[0].clientY;					
-					this.progress.style.width = ((this.endY - this.startY) * 1.8) + 'px';
-				  }
-				}
+				e.stopPropagation();
+				if(this.unfinish && this.startY){
+					if (document.body.scrollTop ===0 && e.touches[0].clientY - this.startY > 10) {
+						e.preventDefault();
+						this.movepx = e.touches[0].clientY - this.startY;
+						this.progress.style.width = (this.movepx * 1.8) + 'px';
+					  }
+					}
 			},
 		onTouchEnd: function(e){
+
 			if(this.unfinish && this.startY){				
-				e.preventDefault(),e.stopPropagation();
+				 e.preventDefault(),e.stopPropagation();
 				 var that = this;
-				 x.removeEventListener('touchend', this, false);
-				 x.removeEventListener('touchmove', this, false);
-				if( that.progress.parentNode.clientWidth > ((that.endY - that.startY) * 1.8)){				
+				 //x.removeEventListener('touchend', this, false);
+				 //x.removeEventListener('touchmove', this, false);
+				 if(that.movepx === 0) return true;
+				//没拖到位，返回
+				if( that.progress.parentNode.clientWidth > (that.movepx * 1.8)){				
 					that.progress.style.WebkitTransition = '300ms width ease-in';
 					that.progress.style.MozTransition = '300ms width ease-in';
 					that.progress.style.width = '0px';		
@@ -59,18 +63,21 @@
 					},300)
 					 
 				}else{
+					
 					that.unfinish = false;
 					that.progress.style.width = '0px';
 					that.progress.parentNode.className = 'colorBar';					
-					
-					
+					setTimeout(function(){
+						location.reload();
+					},2000)
 					//do someting
 				}
+				that.movepx = 0;
 			}
 			 
 		}
 		
-	};
+		};
 	
 	touchDrop.init();
 
