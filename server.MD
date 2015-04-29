@@ -2,7 +2,7 @@
 
 `Vary: Accept-Encoding`设置方法：
 
-##Apache `.htaccess`
+##Apache `/.htaccess`
 ``` xml
 <IfModule mod_headers.c>
         <FilesMatch ".(js|css|xml|gz|html)$">
@@ -14,7 +14,7 @@
 
 ``` xml
 gzip_vary on;
-``` xml
+```
 
 ##IIS `/%windir%\Microsoft.NET\Framework\.net版本号\CONFIG\Web.config`
 
@@ -27,4 +27,9 @@ gzip_vary on;
           </customHeaders>
         </httpProtocol>
       </system.webServer>
+```
+
+##html 
+```html
+<meta http-equiv="Vary" content="Accept-Encoding">
 ```
