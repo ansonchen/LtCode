@@ -1,26 +1,20 @@
-# feidee
+# feidee 用于放些常用或不常用的东东
 
-##随手记改版记录
+##随手记
 
-###去除iphone 默认 input 样式：
-```css
-{
--webkit-appearance: none;
-}
-```
-###iphone按住效果：
-```css
-{
--webkit-tap-highlight-color:rgba(250,250,250,0); 
-}
-```
-注：iphone按住后外框padding:6px
+##文件说明
 
-###iphone 1px问题:
-```css
-{
-border-width: 0 0 1px 0;
--webkit-border-image: url(/m/img/index0408/iListBorder-v.png) 2 0 stretch;
-border-image: url(/m/img/index0408/iListBorder-v.png) 2 0 stretch;
-}
-```
+文件  	| 说明			
+--------|---------------------------
+auto-screen.js	| 自适应屏幕 
+fastclick.js	| 快速点击 
+lazyPic.js	| 拖动时懒加载图片
+progress.js	| 加载时显示进度,参考youtube
+timer.js | 方便测试function性能
+touchDrop.js | 防 Google + 下拉刷新功能
+zepto.min.js | zepto
+
+
+
+
+
