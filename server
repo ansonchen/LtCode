@@ -1,20 +1,24 @@
-现在的新浏览器都支持压缩了，因此如果网站启用了GZip，可以无需再指定“Vary: Accept-Encoding”标头，不过指定“Vary: Accept-Encoding”标头会有更高的保险，而它并不需要你额外的开销，为什么不指定呢？下面是设置方法：
-Apache/.htaccess
+#服务端缓存说明配置
 
+`Vary: Accept-Encoding`设置方法：
+
+##Apache `.htaccess`
+``` xml
 <IfModule mod_headers.c>
         <FilesMatch ".(js|css|xml|gz|html)$">
           Header append Vary: Accept-Encoding
         </FilesMatch>
       </IfModule>
-      
-Nginx
+```      
+##Nginx  `/usr/local/nginx/conf/nginx.conf`
 
-gzip_vary on
+``` xml
+gzip_vary on;
+``` xml
 
+##IIS `/%windir%\Microsoft.NET\Framework\.net版本号\CONFIG\Web.config`
 
-IIS
-在web.config里加上如下配置，web.config位置在：%windir%\Microsoft.NET\Framework\.net版本号\CONFIG\Web.config 。
-
+``` xml
 <system.webServer>
         <httpProtocol>
           <customHeaders>
@@ -23,3 +27,4 @@ IIS
           </customHeaders>
         </httpProtocol>
       </system.webServer>
+```
