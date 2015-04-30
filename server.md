@@ -34,11 +34,12 @@ gzip_vary on;
 <meta http-equiv="Vary" content="Accept-Encoding">
 ```
 ##Gzip
-   
+
+```html
    LoadModule deflate_module modules/mod_deflate.so
    LoadModule headers_module modules/mod_headers.so
-
-```server
+```
+```html
 <IfModule mod_deflate.c>
 DeflateCompressionLevel 6
 SetOutputFilter DEFLATE
