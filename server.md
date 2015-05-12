@@ -47,3 +47,32 @@ SetEnvIfNoCase Request_URI .(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
 SetEnvIfNoCase Request_URI .(?:pdf|doc)$ no-gzip dont-vary
 </IfModule>
 ```   
+
+## FiddlerScript
+
+```javascript
+ static function OnBeforeRequest(oSession: Session) {
+        // Sample Rule: Color ASPX requests in RED
+        // if (oSession.uriContains(".aspx")) {	oSession["ui-color"] = "red";	}
+
+        // Sample Rule: Flag POSTs to fiddler2.com in italics
+        // if (oSession.HostnameIs("www.fiddler2.com") && oSession.HTTPMethodIs("POST")) {	oSession["ui-italic"] = "yup";	}
+
+        // Sample Rule: Break requests for URLs containing "/sandbox/"
+        // if (oSession.uriContains("/sandbox/")) {
+        //     oSession.oFlags["x-breakrequest"] = "yup";	// Existence of the x-breakrequest flag creates a breakpoint; the "yup" value is unimportant.
+        // }
+        
+        
+        //modify:改变服务器地址
+        
+        if (oSession.HostnameIs("bbs.feidee.com")) {	
+            oSession.hostname = "bbs.feidee.ts";            
+            oSession.oRequest["Referer"] = "http://bbs.feidee.ts/";            
+        }
+        
+        if (oSession.HostnameIs("bbsimg.feidee.com")) {	
+            oSession.hostname = "bbs.feidee.ts";            
+            oSession.oRequest["Referer"] = "http://bbs.feidee.ts/";            
+        }
+```
