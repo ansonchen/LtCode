@@ -76,3 +76,17 @@ SetEnvIfNoCase Request_URI .(?:pdf|doc)$ no-gzip dont-vary
             oSession.oRequest["Referer"] = "http://bbs.feidee.ts/";            
         }
 ```
+
+##sass install [Ruby And DevKit Download](http://rubyinstaller.org/downloads/)
+
+``` html
+c:\DevKit 
+ruby dk.rb init
+ruby dk.rb install
+//将https://rubygems.org/换成国内淘宝镜像
+gem sources -a https://ruby.taobao.org/
+gem install json --platform=ruby
+gem install sass
+...
+
+```
