@@ -5,6 +5,7 @@
 ##`Apache`
 ##Apache 重启   `apachectl start/stop/restart/-v`
 ##Apache 默认安装目录 `/etc/httpd/conf`
+##HTTP 服务`service httpd start/restart/stop`
 
 
 
