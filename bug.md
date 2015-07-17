@@ -24,10 +24,10 @@ border-image: url(/m/img/index0408/iListBorder-v.png) 2 0 stretch;
 ```
 
 ###Galxy 不支持 getCurrentPosition 
-
+```
 详见帖：http://stackoverflow.com/questions/18100442/samsung-galaxy-devices-cant-use-geolocation-getcurrentposition
 解决方法：运行一次google map,并定位
-
+```
 ### 手机点击效果
 ```css
 a {
