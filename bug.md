@@ -1,3 +1,4 @@
+
 # 常见问题
 
 ###去除iphone 默认 input 样式：
@@ -14,6 +15,12 @@
 ```
 注：iphone按住后外框padding:6px
 
+###iphone 事件链接
+```css
+ a{
+ text-decoration: none; pointer-events: none; color: #fff 
+ }
+ ```
 ###iphone 1px问题:
 ```css
 {
@@ -49,3 +56,6 @@ a {
 }
 ```
 
+## 常用网址：
+[icomoon](https://icomoon.io)
+[iconfont](http://www.iconfont.cn/)
