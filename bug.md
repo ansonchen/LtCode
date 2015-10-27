@@ -28,6 +28,21 @@ border-width: 0 0 1px 0;
 -webkit-border-image: url(/m/img/index0408/iListBorder-v.png) 2 0 stretch;
 border-image: url(/m/img/index0408/iListBorder-v.png) 2 0 stretch;
 }
+OR:
+.item:before{
+     content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200%;
+      height: 1px;
+      border-top: 1px solid #ddd;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    
+}
 ```
 
 ###Galxy 不支持 getCurrentPosition 
