@@ -91,7 +91,7 @@ gem install sass
 
 ```
 
-###Ubuntu 安装 ss  `sudo -s切换成root`
+###AWS Ubuntu 安装 ss  `sudo -s切换成root`
 ``` html
 
 apt-get install python-pip
@@ -111,6 +111,7 @@ vi /etc/config.json  并添加
     "method":"aes-256-cfb",
     "fast_open": false
 }
+```
 ``` html
 
 ssserver -c /etc/config.json -d start
