@@ -90,3 +90,33 @@ gem install sass
 ...
 
 ```
+
+###Ubuntu 安装 ss  `sudo -s切换成root`
+``` html
+
+apt-get install python-pip
+
+pip install shadowsocks
+
+vi /etc/config.json  并添加 
+```
+``` javascript
+{
+    "server":"0.0.0.0",
+    "server_port":8388,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"password",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false
+}
+``` html
+
+ssserver -c /etc/config.json -d start
+
+vi /etc/rc.local
+
+添加上面这句启动命令，设置为开机自启动
+
+```     
