@@ -14,7 +14,7 @@
 ##npm -g install supervisor
 
 
-``
+##
 supervisor ./bin/www
 
 screen -ls
@@ -22,4 +22,4 @@ screen -r 26832
 screen -X -S 26832 quit
 screen node xxx.js
 
-``
+##
