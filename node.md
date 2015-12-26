@@ -1,3 +1,4 @@
+```javascript
 {
   "name": "db",
   "version": "1.0.0",
@@ -8,5 +9,6 @@
     "mime": "~1.2.7"
   }
 }
-
-npm -g install supervisor
+```
+ 
+##npm -g install supervisor
