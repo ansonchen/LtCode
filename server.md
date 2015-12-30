@@ -94,6 +94,8 @@ gem install sass
 ###AWS Ubuntu 安装 ss  `sudo -s切换成root`
 ``` html
 
+apt-get update
+
 apt-get install python-pip
 
 pip install shadowsocks
