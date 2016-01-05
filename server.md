@@ -123,3 +123,30 @@ vi /etc/rc.local
 添加上面这句启动命令，设置为开机自启动
 
 ```     
+
+###AWS Ubuntu 安装 node
+
+``` html
+sudo apt-get install g++ curl libssl-dev apache2-utils python build-essential gcc 
+sudo apt-get install screen
+sudo apt-get install supervisor
+
+// 下载 官网http://nodejs.org/
+wget http://nodejs.org/dist/v0.10.14.tar.gz
+
+// 解压：
+tar -zxf node-v0.10.14.tar.gz 
+cd node-v0.10.14 
+
+// 默认安装： （默认在home目录下）
+./configure 
+make 
+sudo make install 
+
+//选择目录安装（将nodejs安装在/usr/local/node目录下）
+./configure –prefix=/usr/local/node 
+make 
+sudo make install 
+
+```  
+
