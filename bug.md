@@ -1,4 +1,3 @@
-
 # 常见问题
 
 ###去除iphone 默认 input 样式：
@@ -21,7 +20,7 @@
  text-decoration: none; pointer-events: none; color: #fff 
  }
  ```
-###iphone 1px问题:
+### iphone 1px问题:
 ```css
 {
 border-width: 0 0 1px 0;
@@ -45,7 +44,7 @@ OR:
 }
 ```
 
-###Galxy 不支持 getCurrentPosition 
+### Galxy 不支持 getCurrentPosition 
 ```html
 详见帖：http://stackoverflow.com/questions/18100442/samsung-galaxy-devices-cant-use-geolocation-getcurrentposition
 解决方法：运行一次google map,并定位
