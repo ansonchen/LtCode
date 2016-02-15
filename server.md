@@ -113,6 +113,14 @@ vi /etc/config.json  并添加
     "method":"aes-256-cfb",
     "fast_open": false
 }
+
+//多用户
+“port_password”:
+{
+“8383”:”password1″,
+“8384”:”password2″,
+“8385”:”password3″
+}
 ```
 ``` html
 
