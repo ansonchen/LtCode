@@ -22,7 +22,7 @@ var Timer = {
 	 element = document.createElement('div');
 	 
 }
-Timer.start('creatElement');
+Timer.stop('creatElement');
 
 alert('created' + count + ' in ' + Timer.get('creatElement'));
 
