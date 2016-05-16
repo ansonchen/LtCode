@@ -66,14 +66,14 @@ SetEnvIfNoCase Request_URI .(?:pdf|doc)$ no-gzip dont-vary
         
         //modify:改变服务器地址
         
-        if (oSession.HostnameIs("bbs.feidee.com")) {	
-            oSession.hostname = "bbs.feidee.ts";            
-            oSession.oRequest["Referer"] = "http://bbs.feidee.ts/";            
+        if (oSession.HostnameIs("bbs.xxx.com")) {	
+            oSession.hostname = "bbs.xxx.ts";            
+            oSession.oRequest["Referer"] = "http://bbs.xxx.ts/";            
         }
         
-        if (oSession.HostnameIs("bbsimg.feidee.com")) {	
-            oSession.hostname = "bbs.feidee.ts";            
-            oSession.oRequest["Referer"] = "http://bbs.feidee.ts/";            
+        if (oSession.HostnameIs("bbsimg.xxx.com")) {	
+            oSession.hostname = "bbs.xxx.ts";            
+            oSession.oRequest["Referer"] = "http://bbs.xxx.ts/";            
         }
 ```
 
