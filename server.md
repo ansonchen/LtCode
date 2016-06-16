@@ -115,12 +115,20 @@ vi /etc/config.json  并添加
 }
 
 //多用户
-"port_password":
+{
+    "server":"0.0.0.0",
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "port_password":
 	{
 	"8383":"password1",
 	"8384":"password2",
 	"8385":"password3"
 	},
+    "fast_open": false
+}
 ```
 ``` html
 
