@@ -1,6 +1,6 @@
 #服务端缓存说明配置
 
-##`Vary: Accept-Encoding`设置方法：
+##`Vary: Accept-Encoding`和`Expires`设置方法：
 
 ###Apache `/.htaccess`
 ``` xml
@@ -9,6 +9,12 @@
           Header append Vary: Accept-Encoding
         </FilesMatch>
       </IfModule>
+<IfModule mod_expires.c>
+<Filesmatch ".(jpg|jpeg|png|gif|js|css|swf|ico|woff|mp3)$">
+    ExpiresActive on
+    ExpiresDefault "access plus 7 days"
+</Filesmatch>
+</IfModule>
 ```      
 ###Nginx  `/usr/local/nginx/conf/nginx.conf`
 
@@ -165,4 +171,9 @@ make
 sudo make install 
 
 ```  
-
+### Ubuntu 14.04安装LAMP(Linux，Apache，MySQL，PHP)
+``` html
+sudo apt-get update
+sudo apt-get install tasksel
+sudo tasksel install lamp-server
+```
