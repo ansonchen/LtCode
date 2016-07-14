@@ -14,6 +14,9 @@
 </Filesmatch>
 </IfModule>
 ```      
+> 用`mod_rewrite`时记得将apache的conf文件<Directory>里的
+> `AllowOverride None` 改成 `AllowOverride all`
+
 ###Nginx  `/usr/local/nginx/conf/nginx.conf`
 
 ``` xml
