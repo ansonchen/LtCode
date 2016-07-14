@@ -1,5 +1,3 @@
-#服务端缓存说明配置
-
 ##`Vary: Accept-Encoding`和`Expires`设置方法：
 
 ###Apache `/.htaccess`
@@ -171,9 +169,27 @@ make
 sudo make install 
 
 ```  
-### Ubuntu 14.04安装LAMP(Linux，Apache，MySQL，PHP)
+### Ubuntu 14.04安装LAMP, phpmyadmin
 ``` html
 sudo apt-get update
 sudo apt-get install tasksel
 sudo tasksel install lamp-server
+sudo apt-get install phpmyadmin
+
+// apache2 默认配置为：`/etc/apache2/apaches.conf`
+// mysql 默认配置为：`/etc/mysql/my.cnf`
+// phpmyadmin 默认配置为：`/etc/phpmyadmin/apache.conf`,目录为：`/usr/share/phpmyadmin`
+// 复制phpmyadmin 到 站点目录下
+
+cp -r /usr/share/phpmyadmin /var/www/phpmyadmin
+vi /etc/phpmyadmin/apache.conf
+//把下面两句中的/usr/share/phpmyadmin路径改为/var/www/phpmyadmin
+Alias/phpmyadmin /usr/share/phpmyadmin
+<Directory/usr/share/phpmyadmin>
+```
+### Ubuntu14 apache2 安装 mod_headers, mod_expires ...
+
+``` html
+a2enmod headers 
+a2enmod expires 
 ```
