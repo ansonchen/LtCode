@@ -155,11 +155,11 @@ sudo apt-get install screen
 sudo apt-get install supervisor
 
 // 下载 官网http://nodejs.org/
-wget http://nodejs.org/dist/v0.10.14.tar.gz
+wget https://nodejs.org/dist/v4.3.0/node-v4.3.0.tar.gz
 
 // 解压：
-tar -zxf node-v0.10.14.tar.gz 
-cd node-v0.10.14 
+tar -zxf node-v4.3.0.tar.gz
+cd node-v4.3.0
 
 // 默认安装： （默认在home目录下）
 ./configure 
