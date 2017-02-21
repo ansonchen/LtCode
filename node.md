@@ -23,3 +23,13 @@ screen -X -S 26832 quit
 screen node xxx.js
 
 ```
+## Ubuntu 安装 nodejs 6.0 ['参考'](https://nodejs.org/en/download/package-manager/)
+``` javascript
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+## Ubuntu 安装 nodejs 7.0
+``` javascript
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
