@@ -17,7 +17,7 @@
 [zepto.min.js](https://github.com/ansonchen/LtCode/blob/master/static/js/zepto.min.js) | *zepto*
 [hammer.js](https://github.com/ansonchen/LtCode/blob/master/static/js/hammer.js) | *手势识别*
 [fastclick.js](https://github.com/ansonchen/LtCode/blob/master/static/js/fastclick.js)	| *快速点击*
-[webpack.config.js](https://github.com/ansonchen/LtCode/blob/master/static/js/webpack.config.js)	| *webpack常用配置*
+[webpack.config.js](https://github.com/ansonchen/LtCode/blob/master/static/webpack.config.js)	| *webpack常用配置*
 
 
 > 注：*斜体*文件名为非原创
