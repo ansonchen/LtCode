@@ -196,3 +196,12 @@ Alias/phpmyadmin /usr/share/phpmyadmin
 a2enmod headers 
 a2enmod expires 
 ```
+### Ubuntu 安装 vpn
+```html
+sudo apt-get update && apt-get dist-upgrade
+
+wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
+VPN_IPSEC_PSK='你的IPsec预共享密钥' \
+VPN_USER='你的VPN用户名' \
+VPN_PASSWORD='你的VPN密码' sh vpnsetup.sh
+```
