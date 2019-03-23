@@ -69,7 +69,11 @@ a {
     }
 }
 ```
-
+### 通过-webkit-transform:transition3d/translateZ开启GPU硬件加速之后，浏览器频繁闪烁或抖动
+```css
+-webkit-backface-visibility:hidden;
+-webkit-perspective:1000;
+```
 ## 常用网址：
 [icomoon](https://icomoon.io)
 [iconfont](http://www.iconfont.cn/)
