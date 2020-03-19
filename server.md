@@ -205,3 +205,32 @@ VPN_IPSEC_PSK='你的IPsec预共享密钥' \
 VPN_USER='你的VPN用户名' \
 VPN_PASSWORD='你的VPN密码' sh vpnsetup.sh
 ```
+
+### Ubuntu 使用 supervisor
+`/etc/supervisor/conf.d/ss.conf`
+
+```html
+[program:ssserver]
+command =ssserver -c /anson/config.json
+autostart=true
+autorestart=true
+startsecs=3
+
+```
+
+`/etc/supervisor/conf.d/kcptun.conf`
+
+```html
+
+[program:kcptun]
+user=kcptun
+directory=/usr/local/kcptun
+command=/usr/local/kcptun/server_linux_amd64 -c "/usr/local/kcptun/server-config.json"
+process_name=%(program_name)s
+autostart=true
+redirect_stderr=true
+stdout_logfile=/var/log/kcptun/server.log
+stdout_logfile_maxbytes=1MB
+stdout_logfile_backups=0
+
+```
