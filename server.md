@@ -234,3 +234,5 @@ stdout_logfile_maxbytes=1MB
 stdout_logfile_backups=0
 
 ```
+
+`supervisorctl reload`
