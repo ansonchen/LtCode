@@ -105,7 +105,7 @@ apt-get update
 
 apt-get install python-pip
 
-pip install shadowsocks
+sudo pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U
 
 vi /etc/config.json  并添加 
 ```
@@ -113,12 +113,10 @@ vi /etc/config.json  并添加
 {
     "server":"0.0.0.0",
     "server_port":8388,
-    "local_address": "127.0.0.1",
     "local_port":1080,
     "password":"password",
-    "timeout":300,
-    "method":"aes-256-cfb",
-    "fast_open": false
+    "timeout":600,
+    "method":"aes-256-gcm"
 }
 
 //多用户
@@ -146,7 +144,14 @@ vi /etc/rc.local
 添加上面这句启动命令，设置为开机自启动
 
 ```     
-
+### Ubuntu　安装 kcptun
+	
+``` html	
+wget --no-check-certificate https://raw.githubusercontent.com/kuoruan/kcptun_installer/master/kcptun.sh
+chmod +x ./kcptun.sh
+sudo ./kcptun.sh
+```
+	
 ###AWS Ubuntu 安装 node
 
 ``` html
@@ -211,7 +216,7 @@ VPN_PASSWORD='你的VPN密码' sh vpnsetup.sh
 
 ```html
 [program:ssserver]
-command =ssserver -c /anson/config.json
+command =ssserver -c /etc/config.json
 autostart=true
 autorestart=true
 startsecs=3
