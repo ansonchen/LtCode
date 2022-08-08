@@ -1,6 +1,6 @@
-#`Vary: Accept-Encoding`和`Expires`设置方法：
+# `Vary: Accept-Encoding`和`Expires`设置方法：
 
-##Apache `/.htaccess`
+## Apache `/.htaccess`
 ``` xml
 <IfModule mod_headers.c>
         <FilesMatch ".(js|css|xml|gz|html)$">
@@ -17,13 +17,13 @@
 > 用`mod_rewrite`时记得将apache的conf文件<Directory>里的
 > `AllowOverride None` 改成 `AllowOverride all`
 
-##Nginx  `/usr/local/nginx/conf/nginx.conf`
+## Nginx  `/usr/local/nginx/conf/nginx.conf`
 
 ``` xml
 gzip_vary on;
 ```
 
-##IIS `/%windir%\Microsoft.NET\Framework\.net版本号\CONFIG\Web.config`
+## IIS `/%windir%\Microsoft.NET\Framework\.net版本号\CONFIG\Web.config`
 
 ``` xml
 <system.webServer>
@@ -36,11 +36,11 @@ gzip_vary on;
       </system.webServer>
 ```
 
-##html 
+## html 
 ```html
 <meta http-equiv="Vary" content="Accept-Encoding">
 ```
-#Gzip
+# Gzip
 
 ```html
    LoadModule deflate_module modules/mod_deflate.so
@@ -84,7 +84,7 @@ SetEnvIfNoCase Request_URI .(?:pdf|doc)$ no-gzip dont-vary
         }
 ```
 
-#sass install [Ruby And DevKit Download](http://rubyinstaller.org/downloads/)
+# sass install [Ruby And DevKit Download](http://rubyinstaller.org/downloads/)
 
 ``` html
 c:\DevKit 
@@ -98,7 +98,7 @@ gem install sass
 
 ```
 
-##AWS Ubuntu 安装 ss  `sudo -s切换成root`
+## AWS Ubuntu 安装 ss  `sudo -s切换成root`
 ``` html
 
 apt-get update
@@ -152,7 +152,7 @@ chmod +x ./kcptun.sh
 sudo ./kcptun.sh
 ```
 	
-##AWS Ubuntu 安装 node
+## AWS Ubuntu 安装 node
 
 ``` html
 sudo apt-get install g++ curl libssl-dev apache2-utils python build-essential gcc 
@@ -201,7 +201,7 @@ Alias/phpmyadmin /usr/share/phpmyadmin
 a2enmod headers 
 a2enmod expires 
 ```
-### Ubuntu 安装 vpn
+## Ubuntu 安装 vpn
 ```html
 sudo apt-get update && apt-get dist-upgrade
 
