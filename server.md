@@ -1,6 +1,6 @@
-##`Vary: Accept-Encoding`和`Expires`设置方法：
+#`Vary: Accept-Encoding`和`Expires`设置方法：
 
-###Apache `/.htaccess`
+##Apache `/.htaccess`
 ``` xml
 <IfModule mod_headers.c>
         <FilesMatch ".(js|css|xml|gz|html)$">
@@ -17,13 +17,13 @@
 > 用`mod_rewrite`时记得将apache的conf文件<Directory>里的
 > `AllowOverride None` 改成 `AllowOverride all`
 
-###Nginx  `/usr/local/nginx/conf/nginx.conf`
+##Nginx  `/usr/local/nginx/conf/nginx.conf`
 
 ``` xml
 gzip_vary on;
 ```
 
-###IIS `/%windir%\Microsoft.NET\Framework\.net版本号\CONFIG\Web.config`
+##IIS `/%windir%\Microsoft.NET\Framework\.net版本号\CONFIG\Web.config`
 
 ``` xml
 <system.webServer>
@@ -36,11 +36,11 @@ gzip_vary on;
       </system.webServer>
 ```
 
-###html 
+##html 
 ```html
 <meta http-equiv="Vary" content="Accept-Encoding">
 ```
-##Gzip
+#Gzip
 
 ```html
    LoadModule deflate_module modules/mod_deflate.so
@@ -84,7 +84,7 @@ SetEnvIfNoCase Request_URI .(?:pdf|doc)$ no-gzip dont-vary
         }
 ```
 
-##sass install [Ruby And DevKit Download](http://rubyinstaller.org/downloads/)
+#sass install [Ruby And DevKit Download](http://rubyinstaller.org/downloads/)
 
 ``` html
 c:\DevKit 
@@ -98,7 +98,7 @@ gem install sass
 
 ```
 
-###AWS Ubuntu 安装 ss  `sudo -s切换成root`
+##AWS Ubuntu 安装 ss  `sudo -s切换成root`
 ``` html
 
 apt-get update
@@ -144,7 +144,7 @@ vi /etc/rc.local
 添加上面这句启动命令，设置为开机自启动
 
 ```     
-### Ubuntu　安装 kcptun
+## Ubuntu　安装 kcptun
 	
 ``` html	
 wget --no-check-certificate https://raw.githubusercontent.com/kuoruan/kcptun_installer/master/kcptun.sh
@@ -152,7 +152,7 @@ chmod +x ./kcptun.sh
 sudo ./kcptun.sh
 ```
 	
-###AWS Ubuntu 安装 node
+##AWS Ubuntu 安装 node
 
 ``` html
 sudo apt-get install g++ curl libssl-dev apache2-utils python build-essential gcc 
@@ -177,7 +177,7 @@ make
 sudo make install 
 
 ```  
-### Ubuntu 14.04安装LAMP, phpmyadmin
+## Ubuntu 14.04安装LAMP, phpmyadmin
 ``` html
 sudo apt-get update
 sudo apt-get install tasksel
@@ -195,7 +195,7 @@ vi /etc/phpmyadmin/apache.conf
 Alias/phpmyadmin /usr/share/phpmyadmin
 <Directory/usr/share/phpmyadmin>
 ```
-### Ubuntu14 apache2 安装 mod_headers, mod_expires ...
+## Ubuntu14 apache2 安装 mod_headers, mod_expires ...
 
 ``` html
 a2enmod headers 
@@ -211,7 +211,7 @@ VPN_USER='你的VPN用户名' \
 VPN_PASSWORD='你的VPN密码' sh vpnsetup.sh
 ```
 
-### Ubuntu 使用 supervisor
+## Ubuntu 使用 supervisor
 `/etc/supervisor/conf.d/ss.conf`
 
 ```html
@@ -242,9 +242,9 @@ stdout_logfile_backups=0
 
 `supervisorctl reload`
 	
-### debian9 install ruby 3.1.2
+## debian9 install ruby 3.1.2
 
-```html
+```Shell
 	
 sudo apt update
 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
