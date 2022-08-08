@@ -241,3 +241,23 @@ stdout_logfile_backups=0
 ```
 
 `supervisorctl reload`
+	
+### debian9 install ruby 3.1.2
+
+```html
+	
+sudo apt update
+sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
+
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+
+rbenv install 3.1.2
+rbenv global 3.1.2
+
+gem pristine ffi --version 1.15.5
+gem install bundler jekyll
+
+```
