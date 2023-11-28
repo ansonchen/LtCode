@@ -210,6 +210,12 @@ VPN_IPSEC_PSK='你的IPsec预共享密钥' \
 VPN_USER='你的VPN用户名' \
 VPN_PASSWORD='你的VPN密码' sh vpnsetup.sh
 ```
+## Ubuntu 安装 elixir
+```shell
+  sudo add-apt-repository ppa:rabbitmq/rabbitmq-erlang
+  sudo apt update
+  sudo apt install elixir erlang-dev erlang-xmerl
+```
 
 ## Ubuntu 使用 supervisor
 `/etc/supervisor/conf.d/ss.conf`
